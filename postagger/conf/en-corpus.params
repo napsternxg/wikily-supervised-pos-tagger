@@ -1,0 +1,25 @@
+name=English
+
+## Use lowercase words (Don't need to modify)
+lowercase=false
+
+## Transitive setting all dev and test corpus are added to training corpus
+## (Don't need to modify)
+transductive=false
+
+##Treshold for unknwown words (Don't need to modify)
+unknown-words-thresh=0
+
+## Type of file reader (Don't need to modify)
+reader-type=acl2011
+
+## Name of the traning file (Modify to adapt to your application)
+train-name=en-ptb-train
+## Path of the traning file (Modify to adapt to your application)
+train-file=/tain/projects/acl2012/data/langs/en/data_train.txt
+
+## Name of the test file, you can specify multiple test files
+## (modify to adapt to your application)
+test-name1=en-ptb-test
+## Path of the test file (Modify to adapt to your application)
+test-file1=/tain/projects/acl2012/data/langs/en/data_test.txt

@@ -1,0 +1,17 @@
+Train a POS tagger:
+'run.sh train <corpus_params> <dict_params> <feature_file> <tagger_output> <num_iters> [acc]'
+    <corpus_params>: corpus parameter file, see conf/en-corpus.params for example
+    <dict_params>  : dictionary parameter file, see conf/en-wik-20120320.params for example
+    <feature_file> : feature file of max-ent trainer, see conf/features.txt for example
+    <tagger_output>: output directory for the tagger
+    <num_iters>    : number of iterations that you want to train the tagger, usually 50 iterations are sufficient for the model to converge
+    acc            : optionally, you can check the traning accuracy at the end of the training
+
+Tagging a text file:
+'run.sh tag <text_file> <feature_file> <model_dir> <prediction_output_file>'
+    <text_file>    : text file to be tagged, the file should be in the same format of the corpus file *
+    <feature_file> : feature file of max-ent trainer, see conf/features.txt for example
+    <model_dir>    : the directory that your store a trained tagger
+    <prediction_output_file>> : the output path for the prediction
+
+* Corpus file should be a one/two column tab separated text file consisting one word per line. If you want to perform accuracy estimation, then a additional column of gold tag should present in the corpus file.
